@@ -1,0 +1,394 @@
+/* VIP Shaadi NRI landing — layout & components */
+
+body {
+  font-family: "Merriweather", serif;
+  color: #41404d;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.7;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.section-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #9b8bb0;
+}
+.hero-bg {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 24%, rgba(0, 0, 0, 0.74) 100%),
+    url("https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
+}
+.hero-bg .section-eyebrow {
+  color: rgba(255, 255, 255, 0.88);
+}
+.page-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.left-main {
+  grid-column: span 2 / span 2;
+}
+.right-form {
+  grid-column: span 1 / span 1;
+}
+.page-section {
+  margin-top: 104px;
+}
+.page-section:first-child {
+  margin-top: 0;
+}
+.section-title {
+  color: #5b318b;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.section-copy {
+  color: #72727d;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.card-surface {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #dee2e6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.card-surface h3 + p,
+.card-surface h3 + ul {
+  margin-top: 4px;
+}
+.form-field {
+  height: 2.75rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+  color: #41404d;
+  background: #fff;
+  appearance: auto;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #3d1f6e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background: #2a1450;
+}
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1.75rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+.vip-advantage-card__illustration {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vip-advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.vip-advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.vip-advantage-card__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #41404d;
+}
+@media (max-width: 900px) {
+  .vip-advantage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .vip-advantage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.faq-item[open] summary {
+  background: #fafafa;
+  color: #41404d;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.invite-sticky {
+  position: sticky;
+  top: 24px;
+  border-radius: 16px;
+  background: #f7f4fc;
+  padding: 24px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #dee2e6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.invite-sticky .invite-heading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #5b318b;
+}
+.faq-card {
+  padding: 28px 24px;
+}
+.journey-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
+}
+.journey-tab {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #72727d;
+  padding: 0.65rem 1.1rem;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: none;
+}
+.journey-tab:hover {
+  color: #5b318b;
+}
+.journey-tab[aria-selected="true"] {
+  color: #5b318b;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+.journey-panel {
+  display: none;
+  padding-top: 1.5rem;
+}
+.journey-panel.is-active {
+  display: block;
+}
+.customers-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.customers-title {
+  color: #5b318b;
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.customers-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #48276e;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.customers-see-all:hover {
+  text-decoration: underline;
+}
+.testimonial-shell {
+  padding: 26px clamp(1.25rem, 5vw, 100px) 2rem;
+  position: relative;
+}
+.testimonial-quote-wrap {
+  position: relative;
+  min-height: 9rem;
+  padding: 0.5rem 0 1.5rem 2.5rem;
+}
+.testimonial-quote-mark--top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 26px;
+  object-fit: contain;
+}
+.testimonial-quote-mark--bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  height: 26px;
+  object-fit: contain;
+}
+.testimonial-quote-text {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 300;
+  color: #72727d;
+  padding-right: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(91, 49, 139, 0.08);
+}
+.testimonial-avatar {
+  width: 103px;
+  height: 103px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.testimonial-meta-name {
+  font-size: 16px;
+  color: #72727d;
+  line-height: 1.7;
+  font-weight: 700;
+}
+.testimonial-meta-name + .testimonial-meta-role {
+  margin-top: 4px;
+}
+.testimonial-meta-role {
+  font-size: 16px;
+  color: #72727d;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.testimonial-stars {
+  display: flex;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+.testimonial-stars img {
+  width: 18px;
+  height: 17px;
+  object-fit: contain;
+}
+.testimonial-slides {
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
+}
+.testimonial-slide {
+  display: none;
+  animation: fadeIn 0.35s ease;
+}
+.testimonial-slide.is-active {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 1.25rem;
+  font-family: "Inter", sans-serif;
+}
+.testimonial-dot {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  color: #5b318b;
+  font-size: 38px;
+  line-height: 20px;
+  opacity: 0.25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-dot[aria-current="true"] {
+  opacity: 0.75;
+}
+@media (max-width: 1024px) {
+  .page-wrap {
+    padding: 0 16px;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .left-main,
+  .right-form {
+    grid-column: auto;
+  }
+  .invite-sticky {
+    position: static;
+    top: auto;
+  }
+}
