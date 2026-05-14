@@ -3,212 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VIP Shaadi | Exclusive Matchmaking for NRIs Globally</title>
+  <title>VIP Shaadi | Exclusive Matchmaking for NRIs</title>
   <meta name="description" content="Discreet, consultant-led matchmaking for NRIs globally." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Merriweather:wght@300;400;700&family=Roboto:wght@500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: "Merriweather", serif; color: #41404d; font-weight: 300; font-size: 20px; line-height: 1.7; }
-    h1, h2, h3 { font-weight: 700; line-height: 1.2; }
-    .section-eyebrow {
-      font-family: "Inter", sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      line-height: 1.4;
-      color: #9b8bb0;
-    }
-    .hero-bg .section-eyebrow { color: rgba(255, 255, 255, 0.88); }
-    .hero-intro { color: rgba(255, 255, 255, 0.92); font-size: 20px; font-weight: 300; line-height: 1.7; max-width: 48rem; margin-left: auto; margin-right: auto; margin-top: 1.5rem; }
-    .hero-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 2rem; }
-    .hero-step-pill {
-      display: inline-flex; align-items: center; padding: 0.4rem 0.9rem; border-radius: 9999px;
-      font-size: 15px; font-weight: 400; line-height: 1.5; color: rgba(255, 255, 255, 0.95);
-      font-family: "Inter", sans-serif;
-      border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(255, 255, 255, 0.1);
-    }
-    .page-wrap { max-width: 1440px; margin: 0 auto; padding: 0 36px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-    .left-main { grid-column: span 2 / span 2; }
-    .right-form { grid-column: span 1 / span 1; }
-    .page-section { margin-top: 104px; }
-    .page-section:first-child { margin-top: 0; }
-    .section-title { color: #5b318b; font-size: clamp(2rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.15; }
-    .section-copy { color: #72727d; font-size: 20px; font-weight: 300; line-height: 1.7; }
-    .card-surface {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
-      border: 1px solid #dee2e6;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    .card-surface h3 + p,
-    .card-surface h3 + ul { margin-top: 4px; }
-    .form-field {
-      height: 2.75rem;
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid #e0e0e0;
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-      font-family: inherit;
-      font-size: 16px;
-      font-weight: 300;
-      color: #41404d;
-      background: #fff;
-      appearance: auto;
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: #3d1f6e;
-      color: #fff;
-      font-weight: 700;
-      font-size: 16px;
-      font-family: inherit;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    .btn-primary:hover { background: #2a1450; }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: #fff;
-      color: #5b318b;
-      font-weight: 700;
-      font-size: 16px;
-      font-family: inherit;
-      border: 1px solid #dee2e6;
-      cursor: pointer;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
-    }
-    .btn-secondary:hover { background: #f8f9fa; }
-    .hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 1.75rem; max-width: 56rem; margin-left: auto; margin-right: auto; }
-    .hero-chip {
-      display: inline-flex; align-items: center; padding: 0.5rem 1rem; border-radius: 9999px;
-      font-size: 20px; font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(6px);
-    }
-    .vip-advantage-card__illustration { width: 120px; height: 120px; object-fit: contain; display: block; margin-left: auto; margin-right: auto; }
-    .vip-advantage-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-    .vip-advantage-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .vip-advantage-card__title { font-size: 24px; font-weight: 700; line-height: 1.2; color: #41404d; }
-    @media (max-width: 900px) { .vip-advantage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 480px) { .vip-advantage-grid { grid-template-columns: 1fr; } }
-    .faq-item[open] summary { background: #fafafa; color: #41404d; }
-    .invite-sticky {
-      position: sticky;
-      top: 24px;
-      border-radius: 16px;
-      background: #f7f4fc;
-      padding: 24px;
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
-      border: 1px solid #dee2e6;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    .invite-sticky .invite-heading { font-size: 32px; font-weight: 700; line-height: 1.2; color: #5b318b; }
-    .invite-kicker { font-family: "Inter", sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #9b8bb0; margin-bottom: 0.5rem; }
-    .faq-card { padding: 28px 24px; }
-    .journey-tablist {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 1.5rem;
-      padding: 10px 12px; background: #fff; border: 1px solid #dee2e6; border-radius: 12px;
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06), 0px 8px 24px rgba(0, 0, 0, 0.04);
-    }
-    .journey-tab {
-      font-family: "Merriweather", serif; font-weight: 700; font-size: 20px; color: #72727d;
-      padding: 0.65rem 1.1rem; margin: 0; border: none; background: transparent; cursor: pointer;
-      border-radius: 10px; text-decoration: none; box-shadow: none;
-    }
-    .journey-tab:hover { color: #5b318b; }
-    .journey-tab[aria-selected="true"] { color: #5b318b; background: #fff; border-radius: 10px; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08); }
-    .journey-panel { display: none; padding-top: 1.5rem; }
-    .journey-panel.is-active { display: block; }
-    .customers-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
-    .customers-title { color: #5b318b; font-size: clamp(1.75rem, 2.5vw, 2.5rem); font-weight: 700; line-height: 1.15; }
-    .customers-see-all { display: inline-flex; align-items: center; gap: 0.35rem; color: #48276e; font-size: 16px; font-weight: 300; text-decoration: none; }
-    .customers-see-all:hover { text-decoration: underline; }
-    .testimonial-shell { padding: 26px clamp(1.25rem, 5vw, 100px) 2rem; position: relative; }
-    .testimonial-quote-wrap { position: relative; min-height: 9rem; padding: 0.5rem 0 1.5rem 2.5rem; }
-    .testimonial-quote-mark--top { position: absolute; left: 0; top: 0; width: 32px; height: 26px; object-fit: contain; }
-    .testimonial-quote-mark--bottom { position: absolute; right: 0; bottom: 0; width: 32px; height: 26px; object-fit: contain; }
-    .testimonial-quote-text { font-size: 16px; line-height: 1.7; font-weight: 300; color: #72727d; padding-right: 2.5rem; padding-bottom: 1.25rem; }
-    .testimonial-footer { display: flex; align-items: center; gap: 16px; padding-top: 1.5rem; border-top: 1px solid rgba(91, 49, 139, 0.08); }
-    .testimonial-avatar { width: 103px; height: 103px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-    .testimonial-meta-name { font-size: 16px; color: #72727d; line-height: 1.7; font-weight: 700; }
-    .testimonial-meta-name + .testimonial-meta-role { margin-top: 4px; }
-    .testimonial-meta-role { font-size: 16px; color: #72727d; line-height: 1.7; font-weight: 300; }
-    .testimonial-stars { display: flex; gap: 5px; margin-top: 0.5rem; }
-    .testimonial-stars img { width: 18px; height: 17px; object-fit: contain; }
-    .testimonial-slides { position: relative; overflow: hidden; min-height: 20rem; }
-    .testimonial-slide { display: none; animation: fadeIn 0.35s ease; }
-    .testimonial-slide.is-active { display: block; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .testimonial-nav { display: flex; justify-content: center; gap: 1rem; padding-top: 0.75rem; }
-    .testimonial-nav button {
-      width: 44px; height: 44px; border-radius: 50%; border: 1px solid #dee2e6; background: #fff; cursor: pointer;
-      font-size: 1.25rem; color: #5b318b; display: inline-flex; align-items: center; justify-content: center;
-    }
-    .testimonial-nav button:hover { background: #f7f4fc; }
-    .testimonial-dots { display: flex; justify-content: center; gap: 5px; padding-top: 1.25rem; font-family: "Inter", sans-serif; }
-    .testimonial-dot {
-      width: 20px; height: 20px; border: none; background: none; cursor: pointer; padding: 0;
-      color: #5b318b; font-size: 38px; line-height: 20px; opacity: 0.25; display: flex; align-items: center; justify-content: center;
-    }
-    .testimonial-dot[aria-current="true"] { opacity: 0.75; }
-    .form-step { display: none; }
-    .form-step.is-active { display: block; }
-    .form-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
-    .form-actions .btn-primary { flex: 1; min-width: 8rem; }
-    .why-vip-point { margin-top: 1rem; }
-    .why-vip-point h3 { font-size: 1.25rem; color: #5b318b; margin-bottom: 0.35rem; }
-    .bottom-cta { background: #faf9fc; border-radius: 24px; border: 1px solid #dee2e6; overflow: hidden; }
-    @media (max-width: 1024px) {
-      .page-wrap { padding: 0 16px; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .left-main, .right-form { grid-column: auto; }
-      .invite-sticky { position: static; top: auto; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-white">
   <header class="hero-bg text-white">
     <div class="page-wrap pt-6">
       <div class="flex items-center justify-between gap-4">
-        <div class="text-[20px] font-bold tracking-wide">VIP Shaadi</div>
+        <div class="text-[20px] font-bold tracking-wide">VIP SHAADI</div>
         <div class="hidden md:flex items-center gap-6 text-[20px] font-light">
-          <a href="#stories" class="hover:underline">Success Stories</a>
-          <a href="#why-vip" class="hover:underline">Why VIP Shaadi</a>
-          <a href="#how-it-works" class="hover:underline">How It Works</a>
-          <a href="#faq" class="hover:underline">FAQ</a>
+          <a href="#stories">Success Stories</a>
+          <a href="#why-vip">Why VIP Shaadi</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
         </div>
-        <button type="button" class="btn-primary px-5 py-2.5" data-scroll-form>Get Invited</button>
+        <button type="button" class="btn-primary px-5 py-2.5">Get Invited</button>
       </div>
 
-      <div class="py-24 text-center px-2">
+      <div class="py-24 text-center">
         <p class="section-eyebrow mb-2">Exclusive Matchmaking by Shaadi.com</p>
         <h1 class="text-4xl md:text-6xl font-bold leading-tight">Discreet &amp; curated matchmaking for NRIs Globally</h1>
-        <p class="hero-intro">
-          VIP Shaadi is a consultant-led service designed for serious marriage intent — for accomplished individuals and selective families who value privacy, relevance, and a more thoughtful path to marriage.
-        </p>
         <div class="hero-chips" role="list">
           <span class="hero-chip" role="listitem">Consultant-led introductions</span>
           <span class="hero-chip" role="listitem">Confidential process</span>
           <span class="hero-chip" role="listitem">For serious marriage intent only</span>
-        </div>
-        <div class="hero-steps" aria-hidden="true">
-          <span class="hero-step-pill">Share a few details</span>
-          <span class="hero-step-pill">Complete verification</span>
-          <span class="hero-step-pill">Speak with a consultant</span>
         </div>
       </div>
     </div>
@@ -217,6 +40,12 @@
   <main class="page-wrap py-12 md:py-16">
     <div class="grid-3">
       <div class="left-main">
+        <section class="page-section">
+          <p class="section-copy text-[#41404d]">
+            VIP Shaadi is a consultant-led service designed for serious marriage intent — for accomplished individuals and selective families who value privacy, relevance, and a more thoughtful path to marriage.
+          </p>
+        </section>
+
         <section class="page-section">
           <h2 class="section-title mb-6">The VIP Advantage</h2>
           <div class="vip-advantage-grid">
@@ -240,6 +69,68 @@
               <h3 class="vip-advantage-card__title">100% Privacy</h3>
               <p class="text-[#84848d]">Your profile can remain completely discreet.</p>
             </article>
+          </div>
+        </section>
+
+        <section id="why-vip" class="page-section">
+          <h2 class="section-title">Why VIP Shaadi for NRIs</h2>
+          <p class="section-copy mt-5">A more personalized path than open-market matrimony browsing.</p>
+          <p class="section-copy mt-2">Busy professional lives, cross-border family involvement, and the need for genuine intent make NRI matchmaking very different from generic discovery. VIP Shaadi is designed to reduce noise and increase relevance.</p>
+          <div class="mt-6 grid gap-4 text-[#72727d]">
+            <p><strong>Less time wasted:</strong> Curated introductions designed to save time and reduce irrelevant interactions.</p>
+            <p><strong>More serious intent:</strong> A structured process better suited for people who are genuinely considering marriage.</p>
+            <p><strong>Guided by people, not just profiles:</strong> Dedicated consultants help understand preferences, context, and family expectations.</p>
+            <p><strong>Built for privacy:</strong> A discreet process for individuals and families who value confidentiality.</p>
+          </div>
+        </section>
+
+        <section class="page-section" aria-labelledby="journeys-heading">
+          <h2 id="journeys-heading" class="section-title">Designed for both self-led and family-led journeys.</h2>
+          <p class="section-copy mt-5">One premium service, with relevance for both individuals and families seeking a serious, more selective path.</p>
+          <div class="journey-tablist" role="tablist" aria-label="Who this is for">
+            <button type="button" class="journey-tab" role="tab" id="journey-tab-individuals" aria-controls="journey-panel-individuals" aria-selected="true">For Individuals in the US</button>
+            <button type="button" class="journey-tab" role="tab" id="journey-tab-families" aria-controls="journey-panel-families" aria-selected="false">For Families Seeking a Match in the US</button>
+          </div>
+          <div id="journey-panel-individuals" class="journey-panel is-active" role="tabpanel" aria-labelledby="journey-tab-individuals">
+            <div class="grid gap-6 md:grid-cols-2 md:items-center card-surface p-6 md:p-8">
+              <img class="rounded-[24px] w-full max-h-[320px] object-cover" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Successful Indian professional in the US" />
+              <div>
+                <h3 class="text-2xl font-bold text-[#60416f]">For accomplished individuals who want a more intentional process.</h3>
+                <ul class="space-y-2 text-[#72727d] list-disc pl-5">
+                  <li>Better suited to busy schedules and serious intent</li>
+                  <li>Consultant-led support instead of open-ended browsing</li>
+                  <li>Curated introductions designed around compatibility and fit</li>
+                  <li>A private process that respects discretion</li>
+                </ul>
+                <button type="button" class="btn-primary mt-6 h-11 px-6">Get Invited</button>
+              </div>
+            </div>
+          </div>
+          <div id="journey-panel-families" class="journey-panel" role="tabpanel" aria-labelledby="journey-tab-families" hidden>
+            <div class="grid gap-6 md:grid-cols-2 md:items-center card-surface p-6 md:p-8">
+              <img class="rounded-[24px] w-full max-h-[320px] object-cover md:order-2" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Indian parent and daughter in an elegant home setting" />
+              <div class="md:order-1">
+                <h3 class="text-2xl font-bold text-[#60416f]">For families who want a more serious and guided path to finding a match in the US.</h3>
+                <ul class="space-y-2 text-[#72727d] list-disc pl-5">
+                  <li>Support for family-led decision-making and expectations</li>
+                  <li>A more structured process than general matrimony browsing</li>
+                  <li>Consultant guidance helps bring confidence and clarity</li>
+                  <li>Designed for selective families looking for relevance, not volume</li>
+                </ul>
+                <button type="button" class="btn-primary mt-6 h-11 px-6">Get Invited</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="page-section">
+          <h2 class="section-title">How it works — A structured process designed to keep the experience serious.</h2>
+          <p class="section-copy mt-5">The invitation flow is intentionally simple at the start, followed by a few additional details and verification to help preserve relevance and reduce junk.</p>
+          <div class="grid md:grid-cols-2 gap-5 mt-8">
+            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">01</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Share a few details</h3><p class="text-[#72727d]">Begin with the essentials so the team can understand your context.</p></article>
+            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">02</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Complete verification</h3><p class="text-[#72727d]">Mobile verification helps maintain a more serious and trustworthy process.</p></article>
+            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">03</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Consultant connects</h3><p class="text-[#72727d]">A consultant reviews your details and speaks with you personally.</p></article>
+            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">04</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Curated introductions begin</h3><p class="text-[#72727d]">You move forward with a more selective and personalized experience.</p></article>
           </div>
         </section>
 
@@ -271,7 +162,7 @@
                 <h3 class="customers-title">What our customers say</h3>
               </div>
               <a class="customers-see-all" href="https://www.vipshaadi.com/vipshaadi/vip-shaadi-reviews.php" target="_blank" rel="noopener noreferrer">
-                See all Reviews
+                See all reviews
                 <img src="assets/customers-say/read-all-reviews.png" width="16" height="16" alt="" />
               </a>
             </div>
@@ -298,6 +189,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="testimonial-slide" data-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 3">
                 <div class="testimonial-shell card-surface">
                   <div class="testimonial-quote-wrap">
@@ -319,6 +211,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="testimonial-slide" data-slide="2" role="group" aria-roledescription="slide" aria-label="3 of 3">
                 <div class="testimonial-shell card-surface">
                   <div class="testimonial-quote-wrap">
@@ -341,10 +234,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial-nav">
-              <button type="button" id="testimonialPrev" aria-label="Previous testimonial">‹</button>
-              <button type="button" id="testimonialNext" aria-label="Next testimonial">›</button>
-            </div>
+
             <div class="testimonial-dots" role="tablist" aria-label="Choose testimonial">
               <button type="button" class="testimonial-dot" aria-label="Show testimonial 1" aria-current="true" data-dot="0">•</button>
               <button type="button" class="testimonial-dot" aria-label="Show testimonial 2" aria-current="false" data-dot="1">•</button>
@@ -353,121 +243,33 @@
           </div>
         </section>
 
-        <section id="why-vip" class="page-section">
-          <h2 class="section-title">Why VIP Shaadi for NRIs</h2>
-          <h3 class="text-xl md:text-2xl font-bold text-[#5b318b] mt-5">A more personalized path than open-market matrimony browsing.</h3>
-          <p class="section-copy mt-3">Busy professional lives, cross-border family involvement, and the need for genuine intent make NRI matchmaking very different from generic discovery. VIP Shaadi is designed to reduce noise and increase relevance.</p>
-          <div class="mt-8 space-y-6 text-[#72727d]">
-            <div class="why-vip-point">
-              <h3>Less time wasted</h3>
-              <p>Curated introductions designed to save time and reduce irrelevant interactions.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>More serious intent</h3>
-              <p>A structured process better suited for people who are genuinely considering marriage.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>Guided by people, not just profiles</h3>
-              <p>Dedicated consultants help understand preferences, context, and family expectations.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>Built for privacy</h3>
-              <p>A discreet process for individuals and families who value confidentiality.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="page-section" aria-labelledby="journeys-heading">
-          <h2 id="journeys-heading" class="section-title">Designed for both self-led and family-led journeys.</h2>
-          <p class="section-copy mt-5">One premium service, with relevance for both individuals and families seeking a serious, more selective path.</p>
-          <div class="journey-tablist" role="tablist" aria-label="Who this is for">
-            <button type="button" class="journey-tab" role="tab" id="journey-tab-individuals" aria-controls="journey-panel-individuals" aria-selected="true">For Individuals in the US</button>
-            <button type="button" class="journey-tab" role="tab" id="journey-tab-families" aria-controls="journey-panel-families" aria-selected="false">For Families Seeking a Match in the US</button>
-          </div>
-          <div id="journey-panel-individuals" class="journey-panel is-active" role="tabpanel" aria-labelledby="journey-tab-individuals">
-            <div class="grid gap-6 md:grid-cols-2 md:items-center card-surface p-6 md:p-8">
-              <img class="rounded-[24px] w-full max-h-[320px] object-cover" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Successful Indian professional in the US" />
-              <div>
-                <h3 class="text-2xl font-bold text-[#60416f]">For accomplished individuals who want a more intentional process.</h3>
-                <ul class="space-y-2 text-[#72727d] list-disc pl-5 mt-3">
-                  <li>Better suited to busy schedules and serious intent</li>
-                  <li>Consultant-led support instead of open-ended browsing</li>
-                  <li>Curated introductions designed around compatibility and fit</li>
-                  <li>A private process that respects discretion</li>
-                </ul>
-                <button type="button" class="btn-primary mt-6 h-11 px-6" data-scroll-form>Get Invited</button>
-              </div>
-            </div>
-          </div>
-          <div id="journey-panel-families" class="journey-panel" role="tabpanel" aria-labelledby="journey-tab-families" hidden>
-            <div class="grid gap-6 md:grid-cols-2 md:items-center card-surface p-6 md:p-8">
-              <img class="rounded-[24px] w-full max-h-[320px] object-cover md:order-2" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Indian parent and daughter in an elegant home setting" />
-              <div class="md:order-1">
-                <h3 class="text-2xl font-bold text-[#60416f]">For families who want a more serious and guided path to finding a match in the US.</h3>
-                <ul class="space-y-2 text-[#72727d] list-disc pl-5 mt-3">
-                  <li>Support for family-led decision-making and expectations</li>
-                  <li>A more structured process than general matrimony browsing</li>
-                  <li>Consultant guidance helps bring confidence and clarity</li>
-                  <li>Designed for selective families looking for relevance, not volume</li>
-                </ul>
-                <button type="button" class="btn-primary mt-6 h-11 px-6" data-scroll-form>Get Invited</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="how-it-works" class="page-section">
-          <h2 class="section-title">How it works</h2>
-          <h3 class="text-xl md:text-2xl font-bold text-[#5b318b] mt-4">A structured process designed to keep the experience serious.</h3>
-          <p class="section-copy mt-4">The invitation flow is intentionally simple at the start, followed by a few additional details and verification to help preserve relevance and reduce junk.</p>
-          <div class="grid md:grid-cols-2 gap-5 mt-8">
-            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">01</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Share a few details</h3><p class="text-[#72727d]">Begin with the essentials so the team can understand your context.</p></article>
-            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">02</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Complete verification</h3><p class="text-[#72727d]">Mobile verification helps maintain a more serious and trustworthy process.</p></article>
-            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">03</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Consultant connects</h3><p class="text-[#72727d]">A consultant reviews your details and speaks with you personally.</p></article>
-            <article class="card-surface p-6"><p class="text-5xl text-[rgba(121,92,156,0.46)]">04</p><h3 class="text-xl font-bold text-[#60416f] mt-2">Curated introductions begin</h3><p class="text-[#72727d]">You move forward with a more selective and personalized experience.</p></article>
-          </div>
-          <button type="button" class="btn-primary mt-8 h-11 px-8" data-scroll-form>Get Invited</button>
-        </section>
-
         <section id="common-questions" class="page-section">
           <p class="section-eyebrow mb-3">Common questions, answered earlier</p>
           <h2 class="section-title">The page should not make you hunt for clarity.</h2>
           <p class="section-copy mt-5">Before you reach the FAQ, here are the answers to the questions many serious users are already asking themselves.</p>
-          <div class="mt-8 space-y-6 text-[#72727d]">
-            <div class="why-vip-point">
-              <h3>Is this really for NRIs?</h3>
-              <p>Yes. This page is designed specifically for NRIs and for families exploring serious matches with a global or cross-border lens.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>What happens after I submit?</h3>
-              <p>Your details are reviewed, verification is completed, and a consultant connects with you personally.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>Why is mobile verification required?</h3>
-              <p>Verification helps maintain a more serious, more selective process and reduce junk submissions.</p>
-            </div>
-            <div class="why-vip-point">
-              <h3>Can a parent or family member enquire?</h3>
-              <p>Yes. The service is designed to support both self-led and family-led journeys.</p>
-            </div>
+          <div class="mt-6 space-y-4 text-[#72727d]">
+            <p><strong>Is this really for NRIs?</strong> Yes. This page is designed specifically for NRIs and for families exploring serious matches with a global or cross-border lens.</p>
+            <p><strong>What happens after I submit?</strong> Your details are reviewed, verification is completed, and a consultant connects with you personally.</p>
+            <p><strong>Why is mobile verification required?</strong> Verification helps maintain a more serious, more selective process and reduce junk submissions.</p>
+            <p><strong>Can a parent or family member enquire?</strong> Yes. The service is designed to support both self-led and family-led journeys.</p>
           </div>
         </section>
 
         <section id="faq" class="page-section">
           <p class="section-eyebrow mb-3">FAQ</p>
-          <h2 class="section-title mb-2">Additional questions</h2>
+          <h2 class="section-title mb-8">Additional questions</h2>
           <p class="section-copy mb-6">For anything the page has not already clarified.</p>
           <div class="card-surface faq-card overflow-hidden">
             <details class="faq-item border-b border-[#dee2e6]" open>
               <summary class="cursor-pointer py-4 font-bold list-none">Who is VIP Shaadi best suited for?</summary>
-              <p class="py-4 text-[#72727d]">VIP Shaadi is designed for serious marriage intent — for accomplished individuals and selective families seeking a more private and consultant-led experience.</p>
+              <p class="py-4 text-[#72727d]">VIP Shaadi is designed for serious marriage intent - for accomplished individuals and selective families seeking a more private and consultant-led experience.</p>
             </details>
             <details class="faq-item border-b border-[#dee2e6]">
               <summary class="cursor-pointer py-4 font-bold list-none">Is this page only for users in the US?</summary>
               <p class="py-4 text-[#72727d]">The service is relevant for NRIs and cross-border families, while the current landing structure continues to speak most directly to US-based journeys.</p>
             </details>
             <details class="faq-item border-b border-[#dee2e6]">
-              <summary class="cursor-pointer py-4 font-bold list-none">What does &ldquo;Get Invited&rdquo; mean?</summary>
+              <summary class="cursor-pointer py-4 font-bold list-none">What does Get Invited mean?</summary>
               <p class="py-4 text-[#72727d]">It begins the invitation process. You share a few details, complete verification, and then a consultant reviews your request and connects with you.</p>
             </details>
             <details class="faq-item border-b border-[#dee2e6]">
@@ -480,90 +282,31 @@
             </details>
           </div>
         </section>
-
-        <section class="page-section" id="bottom-cta">
-          <p class="section-eyebrow mb-3">A more personalized beginning</p>
-          <div class="bottom-cta grid md:grid-cols-2 gap-0 md:gap-8 items-center p-8 md:p-10">
-            <div>
-              <h2 class="section-title !text-[clamp(1.5rem,2.5vw,2rem)]">If the process matters, the first step should feel worth taking.</h2>
-              <p class="section-copy mt-5">Start with a few details. Complete verification. Let the VIP Shaadi team guide the next step with greater relevance, privacy, and care.</p>
-              <button type="button" class="btn-primary mt-6 h-11 px-8" data-scroll-form>Get Invited</button>
-            </div>
-            <img class="rounded-[24px] w-full max-h-[340px] object-cover hidden md:block" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="VIP Shaadi premium couple visual" />
-          </div>
-          <p class="text-center text-sm text-[#72727d] mt-6">For serious marriage intent only</p>
-        </section>
       </div>
 
       <aside class="right-form">
-        <div class="invite-sticky" id="invite-form-panel">
-          <p class="invite-kicker">Begin Your Invitation</p>
+        <div class="invite-sticky">
           <h3 class="invite-heading">Get invited to a more selective matchmaking experience.</h3>
           <p class="text-[#72727d]">Start with a few quick details. Mobile verification is required to help us maintain a serious and private process.</p>
-
-          <form class="mt-6 space-y-3" id="inviteForm" action="#" method="get" onsubmit="return false;">
-            <div class="form-step is-active" data-step="1">
-              <select class="form-field" aria-label="I am enquiring for">
-                <option value="">I am enquiring for</option>
-                <option>Myself</option>
-                <option>My Son</option>
-                <option>My Daughter</option>
-                <option>A Family Member</option>
-              </select>
-              <input class="form-field" type="text" placeholder="Full Name" autocomplete="name" />
-              <input class="form-field" type="tel" placeholder="Mobile / WhatsApp" autocomplete="tel" />
-              <input class="form-field" type="email" placeholder="Email" autocomplete="email" />
-              <select class="form-field" aria-label="Country of Residence">
-                <option value="">Country of Residence</option>
-                <option>United States</option>
-                <option>India</option>
-                <option>Other</option>
-              </select>
-              <input class="form-field" type="text" placeholder="City / State" />
-              <button type="button" class="btn-primary h-11 w-full js-form-next">Get Invited</button>
-            </div>
-
-            <div class="form-step" data-step="2">
-              <input class="form-field" type="text" inputmode="numeric" placeholder="Age" />
-              <input class="form-field" type="text" placeholder="Profession" />
-              <select class="form-field" aria-label="Preferred Match Location">
-                <option value="">Preferred Match Location</option>
-                <option>Within the US</option>
-                <option>India or US</option>
-                <option>Open to Global Matches</option>
-              </select>
-              <select class="form-field" aria-label="Marriage Timeline">
-                <option value="">Marriage Timeline</option>
-                <option>Within 6 months</option>
-                <option>Within 12 months</option>
-                <option>Open, but serious</option>
-              </select>
-              <div class="form-actions">
-                <button type="button" class="btn-secondary h-11 flex-1 js-form-back">Back</button>
-                <button type="button" class="btn-primary h-11 flex-[2] js-form-next">Continue to Verification</button>
-              </div>
-            </div>
-
-            <div class="form-step" data-step="3">
-              <h4 class="font-bold text-[#5b318b] text-lg mb-2">Verify your mobile number</h4>
-              <p class="text-[#72727d] text-[15px] mb-3">We use mobile verification to help maintain a more serious, selective and spam-resistant process.</p>
-              <input class="form-field" type="text" inputmode="numeric" placeholder="Enter OTP" autocomplete="one-time-code" />
-              <p class="text-[14px] text-[#72727d]"><button type="button" class="text-[#48276e] font-bold underline bg-transparent border-0 cursor-pointer p-0 font-inherit">Resend OTP</button> · OTP sent to your mobile number</p>
-              <div class="form-actions">
-                <button type="button" class="btn-secondary h-11 flex-1 js-form-back">Back</button>
-                <button type="button" class="btn-primary h-11 flex-[2] js-form-next">Complete Request</button>
-              </div>
-            </div>
-
-            <div class="form-step" data-step="4">
-              <div class="text-center py-4">
-                <div class="text-4xl text-[#3d1f6e] mb-3" aria-hidden="true">✓</div>
-                <h4 class="font-bold text-[#5b318b] text-xl">Thank you. Your request has been received.</h4>
-                <p class="text-[#72727d] mt-3">A VIP Shaadi consultant will review your details and connect with you.</p>
-              </div>
-            </div>
-
-            <p class="text-[#72727d] text-[15px] pt-1 form-step-disclaimer">By proceeding, you agree to be contacted by the VIP Shaadi team. Your details are handled with discretion.</p>
+          <form class="mt-6 space-y-3">
+            <select class="form-field">
+              <option>I am enquiring for</option>
+              <option>Myself</option>
+              <option>My Son</option>
+              <option>My Daughter</option>
+              <option>A Family Member</option>
+            </select>
+            <input class="form-field" placeholder="Full Name" />
+            <input class="form-field" placeholder="Mobile Number" />
+            <input class="form-field" placeholder="Email" />
+            <select class="form-field">
+              <option>Country of Residence</option>
+              <option>United States</option>
+              <option>India</option>
+              <option>Other</option>
+            </select>
+            <button type="button" class="btn-primary h-11 w-full">Get Invited</button>
+            <p class="text-[#72727d]">By proceeding, you agree to be contacted by the VIP Shaadi team. Your details are handled with discretion.</p>
           </form>
         </div>
       </aside>
@@ -573,7 +316,7 @@
   <footer class="bg-[#ebebeb] py-10">
     <div class="page-wrap flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
       <div class="text-[#95959d] font-['Roboto'] text-[20px] font-light">
-        <p>Copyright 1996-2026 Shaadi.com, The World&apos;s No.1 Matchmaking Service</p>
+        <p>Copyright 1996-2026 Shaadi.com, The World's No.1 Matchmaking Service</p>
         <p class="underline mt-1">Terms of Service</p>
       </div>
       <div>
@@ -585,7 +328,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     (function () {
       var tabs = document.querySelectorAll('.journey-tab');
@@ -604,53 +346,18 @@
 
       var slides = document.querySelectorAll('.testimonial-slide');
       var dots = document.querySelectorAll('.testimonial-dot');
-      var n = slides.length;
       function goToSlide(i) {
-        if (n === 0) return;
-        i = ((i % n) + n) % n;
-        slides.forEach(function (s, idx) { s.classList.toggle('is-active', idx === i); });
-        dots.forEach(function (d, idx) { d.setAttribute('aria-current', idx === i ? 'true' : 'false'); });
+        slides.forEach(function (s, idx) {
+          s.classList.toggle('is-active', idx === i);
+        });
+        dots.forEach(function (d, idx) {
+          d.setAttribute('aria-current', idx === i ? 'true' : 'false');
+        });
       }
       dots.forEach(function (dot) {
         dot.addEventListener('click', function () {
           var i = parseInt(dot.getAttribute('data-dot'), 10);
           if (!isNaN(i)) goToSlide(i);
-        });
-      });
-      var prev = document.getElementById('testimonialPrev');
-      var next = document.getElementById('testimonialNext');
-      function currentIdx() {
-        for (var i = 0; i < slides.length; i++) if (slides[i].classList.contains('is-active')) return i;
-        return 0;
-      }
-      if (prev) prev.addEventListener('click', function () { goToSlide(currentIdx() - 1); });
-      if (next) next.addEventListener('click', function () { goToSlide(currentIdx() + 1); });
-
-      var form = document.getElementById('inviteForm');
-      if (form) {
-      var steps = form.querySelectorAll('.form-step');
-      var disclaimer = form.querySelector('.form-step-disclaimer');
-      var cur = 1;
-      function showStep(num) {
-        cur = num;
-        steps.forEach(function (el) {
-          var s = parseInt(el.getAttribute('data-step'), 10);
-          el.classList.toggle('is-active', s === num);
-        });
-        if (disclaimer) disclaimer.style.display = num === 4 ? 'none' : '';
-      }
-      form.querySelectorAll('.js-form-next').forEach(function (btn) {
-        btn.addEventListener('click', function () { if (cur < 4) showStep(cur + 1); });
-      });
-      form.querySelectorAll('.js-form-back').forEach(function (btn) {
-        btn.addEventListener('click', function () { if (cur > 1) showStep(cur - 1); });
-      });
-      }
-
-      document.querySelectorAll('[data-scroll-form]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var el = document.getElementById('invite-form-panel');
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
     })();
